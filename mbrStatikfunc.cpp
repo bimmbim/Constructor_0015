@@ -34,6 +34,8 @@ void mahasiswa::setNim(int pNim) {
     nim = pNim;
 }
 
-
+int mahasiswa::getNim() {
+    return nim;
+}
 
 

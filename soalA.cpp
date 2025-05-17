@@ -73,3 +73,25 @@ void lihatGajiStaff(Staff* s) {
     cout << "Gaji Staff: " << s->gaji << endl;
 }
 
+int main() {
+    // Membuat objek Mahasiswa
+    Mahasiswa mhs("Budi", 12345);
+    mhs.cetak();
+
+    // Membuat objek Dosen
+    Dosen dsn("Dr. Ahmad", "98765", "Lektor", 15000000);
+    dsn.beriNilai(&mhs, 85.5);
+    mhs.cetak();
+
+    // Membuat objek Staff
+    Staff stf("Siti", "ST123", 5000000);
+
+    // Mengubah pangkat dosen
+    stf.ubahPangkat(&dsn, "Profesor");
+
+    // Melihat gaji dosen dan staff
+    lihatGajiDosen(&dsn);
+    lihatGajiStaff(&stf);
+
+    return 0;
+}

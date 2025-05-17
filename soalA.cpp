@@ -21,5 +21,28 @@ public:
     }
 };
 
+// === Class Dosen ===
+class Dosen {
+private:
+    string nama;
+    string NIDN;
+    string pangkat;
+    float gaji;
+
+public:
+    Dosen(string nama, string NIDN, string pangkat, float gaji) : nama(nama), NIDN(NIDN), pangkat(pangkat), gaji(gaji) {}
+
+    // Method untuk memberi nilai kepada mahasiswa
+    void beriNilai(Mahasiswa* m, float nilai) {
+        m->nilai = nilai;
+    }
+
+    // Friend class untuk Staff
+    friend class Staff;
+
+    // Deklarasi friend function untuk melihat gaji dosen
+    friend void lihatGajiDosen(Dosen* d);
+};
+
 
 

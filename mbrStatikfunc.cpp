@@ -30,7 +30,9 @@ void mahasiswa::printAll() {
     cout << endl;
 }
 
-
+void mahasiswa::setNim(int pNim) {
+    nim = pNim;
+}
 
 
 
